@@ -1,2 +1,39 @@
-# charts
-My Helm Charts
+<p align="center">
+    <img width="200px" height=auto src="https://helm.sh/img/helm.svg" />
+</p>
+
+<p align="center">
+    <a href="https://github.com/minicloudlabs/helm-charts/blob/main/LICENSE"><img src="https://img.shields.io/github/license/minicloudlabs/helm-charts" /></a>
+    <a href="https://artifacthub.io/packages/search?repo=plcnk"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/plcnk" /></a>
+    <a href="https://github.com/plcnk/charts/actions/workflows/release.yaml"><img src="https://github.com/plcnk/charts/actions/workflows/release.yaml/badge.svg" /></a>
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/github/v/release/plcnk/charts?filter=it-tools-*" />
+</p>
+
+# plcnk's Helm Charts
+
+Charts for deploying applications on [Kubernetes](https://kubernetes.io/) using [Helm](https://helm.sh/).
+
+The code in this repository is provided as-is with no warranties.
+
+## Usage
+
+[Helm](https://helm.sh) must be installed to use the charts.
+Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
+
+Once Helm is set up properly, add the repo as follows:
+
+```console
+helm repo add plcnk https://charts.plcnk.net
+helm repo update
+```
+
+You can then run `helm search repo plcnk` to see the charts.
+
+## Available charts
+
+| Chart                                                                 | Chart Version | App Version       | Description                                                     |
+| --------------------------------------------------------------------- | ------------- | ----------------- | --------------------------------------------------------------- |
+| [it-tools](https://github.com/plcnk/charts/tree/main/charts/it-tools) | 0.1.0         | 2024.5.13-a0bc346 | Collection of handy online tools for developers, with great UX. |
