@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  it-tools:
+  - apiVersion: v2
+    appVersion: 2024.5.13-a0bc346
+    created: "2024-08-12T15:11:18.793754763Z"
+    description: Collection of handy online tools for developers, with great UX.
+    digest: 35915f2b8ff2bbc20f8b2ade9e61d64b098518c24225478eb1c68f5e2f262f22
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/main/public/mstile-310x310.png
+    maintainers:
+    - email: romain.pluciennik@gmail.com
+      name: Romain Pluciennik
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-08-12T15:11:18.79376389Z"
