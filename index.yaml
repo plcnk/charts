@@ -1,6 +1,33 @@
 apiVersion: v1
 entries:
   it-tools:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Changed chart metadata
+      artifacthub.io/images: |
+        - name: it-tools
+          image: ghcr.io/corentinth/it-tools:2024.5.13-a0bc346
+          platforms:
+            - linux/amd64
+            - linux/arm64
+    apiVersion: v2
+    appVersion: 2024.5.13-a0bc346
+    created: "2024-08-12T17:29:46.401013421Z"
+    description: Collection of handy online tools for developers, with great UX.
+    digest: 42f8cf7655f347f89f986c7fdc91a26a460acb22ca1ce6359a06844bdea8fce4
+    home: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/it-tools-light.png
+    maintainers:
+    - email: romain.pluciennik@gmail.com
+      name: Romain Pluciennik
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/it-tools-1.0.0/it-tools-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: 2024.5.13-a0bc346
     created: "2024-08-12T15:11:18.793754763Z"
@@ -17,4 +44,4 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-12T15:11:18.79376389Z"
+generated: "2024-08-12T17:29:46.401027568Z"
