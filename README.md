@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/v/release/plcnk/charts?filter=it-tools-*" />
+    <a href="https://artifacthub.io/packages/helm/plcnk/it-tools"><img src="https://img.shields.io/github/v/release/plcnk/charts?filter=it-tools-*" /></a>
 </p>
 
 # plcnk's Helm Charts
@@ -40,4 +40,4 @@ You can then run `helm search repo plcnk` to see the charts.
 
 ## License
 
-[MIT License](https://github.com/plcnk/charts/blob/master/LICENSE).
+This project is licensed under the [MIT License](https://github.com/plcnk/charts/blob/master/LICENSE).
