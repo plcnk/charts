@@ -37,3 +37,7 @@ You can then run `helm search repo plcnk` to see the charts.
 | Chart                                                                 | Chart Version | App Version       | Description                                                     |
 | --------------------------------------------------------------------- | ------------- | ----------------- | --------------------------------------------------------------- |
 | [it-tools](https://github.com/plcnk/charts/tree/main/charts/it-tools) | 0.1.0         | 2024.5.13-a0bc346 | Collection of handy online tools for developers, with great UX. |
+
+## License
+
+[MIT License](https://github.com/plcnk/charts/blob/master/LICENSE).
