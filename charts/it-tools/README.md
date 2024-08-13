@@ -1,4 +1,4 @@
-# it-tools
+# IT-Tools
 
 Helm chart for deploying [it-tools](https://it-tools.tech/).
 
