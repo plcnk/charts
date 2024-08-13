@@ -12,6 +12,34 @@ entries:
           url: https://github.com/plcnk/charts/tree/master/charts/it-tools
     apiVersion: v2
     appVersion: 2024.5.13-a0bc346
+    created: "2024-08-13T17:33:44.93227611Z"
+    description: Collection of handy online tools for developers, with great UX.
+    digest: d8855b2b93dc35a6109738f5f749b4e6a3986b67832b1048c71a8a93abc2bacf
+    home: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg
+    keywords:
+    - it-tools
+    - it
+    - tools
+    kubeVersion: '>=1.22.0-0'
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/it-tools-1.0.2/it-tools-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Changed chart metadata
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/CorentinTh/it-tools
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    apiVersion: v2
+    appVersion: 2024.5.13-a0bc346
     created: "2024-08-13T17:25:30.667395656Z"
     description: Collection of handy online tools for developers, with great UX.
     digest: 0a0eb728e560f85300707b0d65a00f175052db61b7bf23d9d909e999a81dd6ca
@@ -72,4 +100,4 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-13T17:25:30.667444006Z"
+generated: "2024-08-13T17:33:44.932295857Z"
