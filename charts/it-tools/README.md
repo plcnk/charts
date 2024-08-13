@@ -11,24 +11,33 @@ it-tools is a collection of handy online tools for developers, with great UX.
 
 * <https://github.com/CorentinTh/it-tools>
 
-## Get repo
+## Installing the Chart
+
+To install the chart with the release name `it-tools`
+
+### OCI (Recommended)
+
+```console
+helm install it-tools oci://ghcr.io/plcnk/charts/it-tools
+```
+
+### Traditional
 
 ```console
 helm repo add plcnk https://charts.plcnk.net
 helm repo update
+helm install it-tools plcnk/it-tools
 ```
 
-## Install chart
+## Uninstalling the Chart
+
+To uninstall the `it-tools` deployment
 
 ```console
-helm install [RELEASE_NAME] plcnk/it-tools
+helm uninstall it-tools
 ```
 
-## Uninstall chart
-
-```console
-helm uninstall [RELEASE_NAME]
-```
+The command removes all the Kubernetes components associated with the chart **including persistent volumes** and deletes the release.
 
 ## Parameters
 
