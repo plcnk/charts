@@ -32,7 +32,7 @@ You can then run `helm search repo plcnk` to see the charts.
 
 | Chart | Description |
 | ----- | ----------- |
-| [IT-Tools <img src='https://raw.githubusercontent.com/plcnk/charts/main/charts/it-tools/icon.svg' alt='it-tools icon' width='18px' align='right' loading='lazy'>](charts/it-tools/) | Collection of handy online tools for developers, with great UX. |
+| [IT-Tools <img src='https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg' alt='it-tools icon' width='18px' align='right' loading='lazy'>](charts/it-tools/) | Collection of handy online tools for developers, with great UX. |
 
 ## License
 
