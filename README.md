@@ -8,9 +8,9 @@
     <a href="https://github.com/plcnk/charts/actions/workflows/release.yaml"><img src="https://github.com/plcnk/charts/actions/workflows/release.yaml/badge.svg" /></a>
 </p>
 
-# plcnk's Helm Charts
+# Charts
 
-Charts for deploying applications on [Kubernetes](https://kubernetes.io/) using [Helm](https://helm.sh/).
+A collection of [Helm](https://helm.sh) charts for [Kubernetes](https://kubernetes.io/).
 
 The code in this repository is provided as-is with no warranties.
 
