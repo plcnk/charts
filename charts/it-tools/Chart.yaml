@@ -1,23 +1,25 @@
 apiVersion: v2
 name: it-tools
 description: Collection of handy online tools for developers, with great UX.
-icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/it-tools-light.png
-type: application
-version: 1.0.0
-appVersion: "2024.5.13-a0bc346"
 home: https://github.com/plcnk/charts/tree/master/charts/it-tools
+icon: https://raw.githubusercontent.com/plcnk/charts/main/charts/it-tools/icon.svg
+type: application
+version: 1.0.1
+# renovate datasource=docker depName=ghcr.io/corentinth/it-tools
+appVersion: "2024.5.13-a0bc346"
+kubeVersion: ">=1.22.0-0"
+keywords:
+  - it-tools
+  - it
+  - tools
 sources:
   - https://github.com/CorentinTh/it-tools
-maintainers:
-  - name: Romain Pluciennik
-    email: romain.pluciennik@gmail.com
 annotations:
   artifacthub.io/changes: |
     - kind: changed
       description: Changed chart metadata
-  artifacthub.io/images: |
-    - name: it-tools
-      image: ghcr.io/corentinth/it-tools:2024.5.13-a0bc346
-      platforms:
-        - linux/amd64
-        - linux/arm64
+  artifacthub.io/links: |-
+    - name: App Source
+      url: https://github.com/CorentinTh/it-tools
+    - name: Chart Source
+      url: https://github.com/plcnk/charts/tree/master/charts/it-tools

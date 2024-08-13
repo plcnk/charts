@@ -8,10 +8,6 @@
     <a href="https://github.com/plcnk/charts/actions/workflows/release.yaml"><img src="https://github.com/plcnk/charts/actions/workflows/release.yaml/badge.svg" /></a>
 </p>
 
-<p align="center">
-    <a href="https://artifacthub.io/packages/helm/plcnk/it-tools"><img src="https://img.shields.io/github/v/release/plcnk/charts?filter=it-tools-*" /></a>
-</p>
-
 # plcnk's Helm Charts
 
 Charts for deploying applications on [Kubernetes](https://kubernetes.io/) using [Helm](https://helm.sh/).
@@ -34,9 +30,9 @@ You can then run `helm search repo plcnk` to see the charts.
 
 ## Available charts
 
-| Chart                                                                 | Chart Version | App Version       | Description                                                     |
-| --------------------------------------------------------------------- | ------------- | ----------------- | --------------------------------------------------------------- |
-| [it-tools](https://github.com/plcnk/charts/tree/main/charts/it-tools) | 1.0.0         | 2024.5.13-a0bc346 | Collection of handy online tools for developers, with great UX. |
+| Chart | Description |
+| ----- | ----------- |
+| [IT-Tools <img src='https://raw.githubusercontent.com/plcnk/charts/main/charts/it-tools/icon.svg' alt='it-tools icon' width='18px' align='right' loading='lazy'>](charts/it-tools/) | Collection of handy online tools for developers, with great UX. |
 
 ## License
 
