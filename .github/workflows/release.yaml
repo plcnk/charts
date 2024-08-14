@@ -23,8 +23,8 @@ jobs:
     name: Release Charts
     runs-on: ubuntu-latest
     env:
-      AUTHOR_USER: charts-bot
-      AUTHOR_EMAIL: 178334506+plcnk-charts-bot[bot]@users.noreply.github.com
+      AUTHOR_USER: plcnk-bot
+      AUTHOR_EMAIL: 178334506+plcnk-bot[bot]@users.noreply.github.com
     steps:
       - name: Generate Token
         id: app-token
