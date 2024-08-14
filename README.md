@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/minicloudlabs/helm-charts/blob/main/LICENSE"><img src="https://img.shields.io/github/license/minicloudlabs/helm-charts" /></a>
+    <a href="https://github.com/plcnk/charts/blob/main/LICENSE"><img src="https://img.shields.io/github/license/plcnk/charts" /></a>
     <a href="https://artifacthub.io/packages/search?repo=plcnk"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/plcnk" /></a>
     <a href="https://github.com/plcnk/charts/actions/workflows/release.yaml"><img src="https://github.com/plcnk/charts/actions/workflows/release.yaml/badge.svg" /></a>
 </p>
