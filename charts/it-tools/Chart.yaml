@@ -4,7 +4,7 @@ description: Collection of handy online tools for developers, with great UX.
 home: https://github.com/plcnk/charts/tree/master/charts/it-tools
 icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg
 type: application
-version: 1.0.5
+version: 2.0.0
 # renovate datasource=docker depName=ghcr.io/corentinth/it-tools
 appVersion: "2024.5.13-a0bc346"
 kubeVersion: ">=1.22.0-0"
@@ -12,12 +12,16 @@ keywords:
   - it-tools
   - it
   - tools
+dependencies:
+  - name: common
+    repository: https://bjw-s.github.io/helm-charts
+    version: 3.3.2
 sources:
   - https://github.com/CorentinTh/it-tools
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Changed chart metadata
+      description: Major chart overhaul. Now using bjw-s's common library chart.
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/CorentinTh/it-tools
