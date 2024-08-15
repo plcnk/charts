@@ -1,0 +1,93 @@
+{{/* Append the hardcoded settings */}}
+{{- define "it-tools.harcodedValues" -}}
+configMaps:
+  nginx-conf:
+    enabled: true
+    data:
+      nginx.conf: |
+        worker_processes  auto;
+
+        error_log  /tmp/nginx/error.log warn;
+        pid        /tmp/nginx/nginx.pid;
+
+        events { 
+          worker_connections  1024; 
+        }
+
+        http {
+            include /etc/nginx/mime.types;
+        
+            server {
+                listen 80;
+                server_name _;
+                root /usr/share/nginx/html;
+                index index.html;
+
+                location / {
+                    try_files $uri $uri/ /index.html;
+                }
+            }
+        }
+
+persistence:
+  cache:
+    enabled: true
+    type: emptyDir
+    advancedMounts:
+      main:
+        app:
+          - path: /var/cache/nginx
+  tmp:
+    enabled: true
+    type: emptyDir
+    advancedMounts:
+      main:
+        app:
+          - path: /tmp/nginx
+  nginx-conf:
+    enabled: true
+    type: configMap
+    name: {{ include "bjw-s.common.lib.chart.names.fullname" . }}-nginx-conf
+    advancedMounts:
+      main:
+        app:
+          - path: /etc/nginx/nginx.conf
+            subPath: nginx.conf
+
+controllers:
+  main:
+    containers:
+      app:
+        ports:
+          - containerPort: 80
+            name: http
+            protocol: TCP
+        probes:
+          liveness:
+            enabled: true
+            custom: true
+            spec:
+              httpGet:
+                path: /
+                port: http
+              periodSeconds: 30
+              timeoutSeconds: 30
+          readiness:
+            enabled: true
+            custom: true
+            spec:
+              httpGet:
+                path: /
+                port: http
+              periodSeconds: 30
+              timeoutSeconds: 30
+{{- end -}}
+
+{{- $tmplVars := deepCopy . -}}
+{{ include "bjw-s.common.loader.init" $tmplVars }}
+{{- $defaultValues := include "it-tools.harcodedValues" $tmplVars | fromYaml -}}
+{{- $_ := mustMerge .Values $defaultValues -}}
+
+{{/* Render the templates */}}
+{{ include "bjw-s.common.loader.init" . }}
+{{ include "bjw-s.common.loader.generate" . }}

@@ -1,15 +1,31 @@
-# IT-Tools
+# # it-tools
 
-Helm chart for deploying [it-tools](https://it-tools.tech/).
+<img src="https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg" align="right" width="92" alt="it-tools logo">
 
-it-tools is a collection of handy online tools for developers, with great UX.
+![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat)
+![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
+![AppVersion: 2024.5.13-a0bc346](https://img.shields.io/badge/AppVersion-2024.5.13--a0bc346-informational?style=flat)
 
-> [!NOTE]
-> This chart is not maintained by the original author of it-tools and any problems with this chart should be submitted [here](https://github.com/plcnk/charts/issues/new).
+Collection of handy online tools for developers, with great UX.
 
-## Source code
+**Homepage:** <https://github.com/plcnk/charts/tree/master/charts/it-tools>
+
+**This chart is not maintained by the upstream project and any issues with the chart should be raised
+[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=it-tools&version=2.0.0)**
+
+## Source Code
 
 * <https://github.com/CorentinTh/it-tools>
+
+## Requirements
+
+Kubernetes: `>=1.22.0-0`
+
+## Dependencies
+
+| Repository | Name | Version |
+|------------|------|---------|
+| <https://bjw-s.github.io/helm-charts> | common | 3.3.2 |
 
 ## Installing the Chart
 
@@ -39,80 +55,51 @@ helm uninstall it-tools
 
 The command removes all the Kubernetes components associated with the chart **including persistent volumes** and deletes the release.
 
-## Parameters
+## Configuration
 
-### Global parameters
+Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
+Other values may be used from the [values.yaml](https://github.com/bjw-s/helm-charts/tree/main/charts/library/common/values.yaml) from the [bjw-s common library](https://github.com/bjw-s/helm-charts/tree/main/charts/library/common).
 
-| Name               | Description                                    | Value |
-| ------------------ | ---------------------------------------------- | ----- |
-| `replicaCount`     | Number of replicas for the it-tools Deployment | `1`   |
-| `imagePullSecrets` | Docker registry pull secrets                   | `[]`  |
-| `nameOverride`     | Name override                                  | `""`  |
-| `fullnameOverride` | Full name override                             | `""`  |
-| `podAnnotations`   | Additional annotations for the Pod resource    | `{}`  |
-| `podLabels`        | Additional labels for the Pod resource         | `{}`  |
-| `nodeSelector`     | Node labels for pod assignment                 | `{}`  |
-| `tolerations`      | Tolerations for pod assignment                 | `[]`  |
-| `affinity`         | Affinity for pod assignment                    | `{}`  |
+Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
-### Image parameters
+```console
+helm install it-tools \
+  --set env.TZ="America/New York" \
+    plcnk/it-tools
+```
 
-| Name               | Description                                                   | Value                         |
-| ------------------ | ------------------------------------------------------------- | ----------------------------- |
-| `image.repository` | Docker image repository                                       | `ghcr.io/corentinth/it-tools` |
-| `image.pullPolicy` | Docker image pull policy                                      | `IfNotPresent`                |
-| `image.tag`        | Overrides the image tag whose default is the chart appVersion | `""`                          |
+Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
-### Service account parameters
+```console
+helm install it-tools plcnk/it-tools -f values.yaml
+```
 
-| Name                         | Description                                                                                                            | Value   |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------- |
-| `serviceAccount.create`      | Specifies whether a service account should be created                                                                  | `false` |
-| `serviceAccount.automount`   | Automatically mount a ServiceAccount's API credentials?                                                                | `true`  |
-| `serviceAccount.annotations` | Additional annotations for the ServiceAccount resource                                                                 | `{}`    |
-| `serviceAccount.name`        | The name of the service account to use. If not set and create is true, a name is generated using the fullname template | `""`    |
+## Custom configuration
 
-### Security context parameters
+N/A
 
-| Name                                       | Description                               | Value            |
-| ------------------------------------------ | ----------------------------------------- | ---------------- |
-| `securityContext.capabilities.drop`        | Capabilities to drop                      | `["ALL"]`        |
-| `securityContext.readOnlyRootFilesystem`   | If root filesystem should be read-only    | `true`           |
-| `securityContext.runAsNonRoot`             | If pod should be run as non-root          | `true`           |
-| `securityContext.runAsUser`                | User to run pod as                        | `10099`          |
-| `securityContext.runAsGroup`               | Group to run pod as                       | `10099`          |
-| `securityContext.allowPrivilegeEscalation` | If privilege escalation should be allowed | `false`          |
-| `securityContext.seccompProfile.type`      | seccomp profile type                      | `RuntimeDefault` |
+## Values
 
-### Service parameters
+**Important**: When deploying an application Helm chart you can add more values from the bjw-s common library chart [here](https://github.com/bjw-s/helm-charts/tree/main/charts/library/common)
 
-| Name           | Description            | Value       |
-| -------------- | ---------------------- | ----------- |
-| `service.type` | Service type to create | `ClusterIP` |
-| `service.port` | Service port to use    | `80`        |
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| controllers.main.containers.app.env | object | See [values.yaml](./values.yaml) | Environment variables |
+| controllers.main.containers.app.image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
+| controllers.main.containers.app.image.repository | string | `"ghcr.io/corentinth/it-tools"` | Image repository |
+| controllers.main.containers.app.image.tag | string | `"2024.5.13-a0bc346"` | Image tag |
+| controllers.main.containers.app.securityContext.allowPrivilegeEscalation | bool | `false` | Disable privilege escalations |
+| controllers.main.containers.app.securityContext.capabilities | object | `{"drop":["ALL"]}` | Drop all capabilities |
+| controllers.main.containers.app.securityContext.readOnlyRootFilesystem | bool | `true` | Mount the container's root filesystem as read-only |
+| controllers.main.pod.securityContext.fsGroup | int | `65534` | Volume binds will be granted to `nobody` group |
+| controllers.main.pod.securityContext.runAsGroup | int | `65534` | Run as `nobody` group |
+| controllers.main.pod.securityContext.runAsNonRoot | bool | `true` | Run container as a non-root user |
+| controllers.main.pod.securityContext.runAsUser | int | `65534` | Run as `nobody` user |
+| controllers.main.resources | object | `{}` | Set the resource requests / limits for the container. |
+| controllers.main.type | string | `"deployment"` | Controller type |
+| ingress.main | object | See [values.yaml](./values.yaml) | Enable and configure ingress settings for the chart under this key. |
+| persistence | object | See [values.yaml](./values.yaml) | Configure persistence for the chart under this key. |
+| service | object | See [values.yaml](./values.yaml) | Configure the services for the chart here. |
 
-### Ingress parameters
-
-| Name                  | Description                                                              | Value   |
-| --------------------- | ------------------------------------------------------------------------ | ------- |
-| `ingress.enabled`     | Enable ingress record generation                                         | `false` |
-| `ingress.className`   | IngressClass that will be be used to implement the Ingress               | `""`    |
-| `ingress.annotations` | Additional annotations for the Ingress resource                          | `{}`    |
-| `ingress.hosts`       | An array with hostname(s) to be covered with the ingress record          | `[]`    |
-| `ingress.tls`         | TLS configuration for hostname(s) to be covered with this ingress record | `[]`    |
-
-### Resources parameters
-
-| Name        | Description          | Value |
-| ----------- | -------------------- | ----- |
-| `resources` | Kubernetes resources | `{}`  |
-
-### Autoscaling parameters
-
-| Name                                            | Description                          | Value   |
-| ----------------------------------------------- | ------------------------------------ | ------- |
-| `autoscaling.enabled`                           | Enable Horizontal POD autoscaling    | `false` |
-| `autoscaling.minReplicas`                       | Minimum number of replicas           | `1`     |
-| `autoscaling.maxReplicas`                       | Maximum number of replicas           | `100`   |
-| `autoscaling.targetCPUUtilizationPercentage`    | Target CPU utilization percentage    | `80`    |
-| `autoscaling.targetMemoryUtilizationPercentage` | Target Memory utilization percentage | `80`    |
+---
+Autogenerated from chart metadata using [helm-docs](https://github.com/norwoodj/helm-docs)

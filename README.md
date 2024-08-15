@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/plcnk/charts/blob/master/LICENSE"><img src="https://img.shields.io/github/license/plcnk/charts" /></a>
+    <a href="./LICENSE"><img src="https://img.shields.io/github/license/plcnk/charts" /></a>
     <a href="https://artifacthub.io/packages/search?repo=plcnk"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/plcnk" /></a>
     <a href="https://github.com/plcnk/charts/actions/workflows/release.yaml"><img src="https://github.com/plcnk/charts/actions/workflows/release.yaml/badge.svg" /></a>
 </p>
@@ -12,28 +12,18 @@
 
 A collection of [Helm](https://helm.sh) charts for [Kubernetes](https://kubernetes.io/).
 
+All charts are based on the [bjw-s common library chart](https://github.com/bjw-s/helm-charts/tree/main/charts/library/common).
+
+Also available on [Artifact Hub](https://artifacthub.io/packages/search?repo=plcnk).
+
 The code in this repository is provided as-is with no warranties.
 
-## Usage
-
-[Helm](https://helm.sh) must be installed to use the charts.
-Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
-
-Once Helm is set up properly, add the repo as follows:
-
-```console
-helm repo add plcnk https://charts.plcnk.net
-helm repo update
-```
-
-You can then run `helm search repo plcnk` to see the charts.
-
-## Available charts
+## Chart Overview
 
 | Chart | Description |
 | ----- | ----------- |
-| [IT-Tools <img src='https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg' alt='it-tools icon' width='18px' align='right' loading='lazy'>](https://github.com/plcnk/charts/tree/master/charts/it-tools) | Collection of handy online tools for developers, with great UX. |
+| [# it-tools <img src='https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg' alt='it-tools icon' width='18px' align='right' loading='lazy'>](charts/it-tools/) | Collection of handy online tools for developers, with great UX. |
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/plcnk/charts/blob/master/LICENSE).
+This project is licensed under the [MIT License](./LICENSE).
