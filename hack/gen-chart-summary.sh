@@ -34,6 +34,6 @@ sed -i '' '/^'"$charts_header"'$/,$d' "$charts_summary_file"
       chart_icon="<img src='$chart_icon' alt='$chart_name icon' width='${width}px' align='right' loading='lazy'>"
     fi
     pretty_name="$(head -n1 "$(dirname "$chart_yaml")/README.md" | sed 's/^# //')"
-    echo "| [$pretty_name $chart_icon](charts/$chart_name/) | $chart_description |"
+    echo "| [$pretty_name $chart_icon](https://github.com/plcnk/charts/tree/master/charts/$chart_name/) | $chart_description |"
   done
 } >> "$charts_summary_file"

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="./LICENSE"><img src="https://img.shields.io/github/license/plcnk/charts" /></a>
+    <a href="https://github.com/plcnk/charts/blob/master/LICENSE"><img src="https://img.shields.io/github/license/plcnk/charts" /></a>
     <a href="https://artifacthub.io/packages/search?repo=plcnk"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/plcnk" /></a>
     <a href="https://github.com/plcnk/charts/actions/workflows/release.yaml"><img src="https://github.com/plcnk/charts/actions/workflows/release.yaml/badge.svg" /></a>
 </p>
@@ -22,7 +22,7 @@ The code in this repository is provided as-is with no warranties.
 
 | Chart | Description |
 | ----- | ----------- |
-| [# it-tools <img src='https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg' alt='it-tools icon' width='18px' align='right' loading='lazy'>](charts/it-tools/) | Collection of handy online tools for developers, with great UX. |
+| [# it-tools <img src='https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg' alt='it-tools icon' width='18px' align='right' loading='lazy'>](https://github.com/plcnk/charts/tree/master/charts/it-tools/) | Collection of handy online tools for developers, with great UX. |
 
 ## License
 
