@@ -4,6 +4,38 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Major chart overhaul. Now using bjw-s's common library chart.
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/CorentinTh/it-tools
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    apiVersion: v2
+    appVersion: 2024.5.13-a0bc346
+    created: "2024-08-15T23:10:01.9171973Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.3.2
+    description: Collection of handy online tools for developers, with great UX.
+    digest: 47ac917133d97a4829ba2895c4e5d8f363a46fa9f608758b2e6e995fd69c1a88
+    home: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg
+    keywords:
+    - it-tools
+    - it
+    - tools
+    kubeVersion: '>=1.22.0-0'
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/it-tools-2.0.0/it-tools-2.0.0.tgz
+    version: 2.0.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Changed chart metadata
       artifacthub.io/links: |-
         - name: App Source
@@ -184,4 +216,4 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-14T05:17:35.846988414Z"
+generated: "2024-08-15T23:10:01.917225232Z"
