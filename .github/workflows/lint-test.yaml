@@ -53,4 +53,6 @@ jobs:
         uses: helm/kind-action@v1.10.0
 
       - name: Run chart-testing (install)
-        run: ct install --config .github/ct-install-config.yaml
+        run: |
+          helm repo add bjw-s https://bjw-s.github.io/helm-charts
+          ct install --config .github/ct-install-config.yaml
