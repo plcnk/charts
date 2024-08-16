@@ -1,3 +1,5 @@
 debug: true
 all: true
 validate-maintainers: false
+chart-repos:
+  - bjw-s=https://bjw-s.github.io/helm-charts

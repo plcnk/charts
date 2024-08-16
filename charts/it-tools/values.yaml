@@ -62,7 +62,7 @@ service:
     controller: main
     ports:
       http:
-        port: 80
+        port: 8080
 
 # -- Configure persistence for the chart under this key.
 # @default -- See [values.yaml](./values.yaml)
