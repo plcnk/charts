@@ -1,2 +1,4 @@
 debug: true
 all: true
+chart-repos:
+  - bjw-s=https://bjw-s.github.io/helm-charts

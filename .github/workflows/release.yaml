@@ -44,9 +44,7 @@ jobs:
           git config user.email "${{ env.AUTHOR_EMAIL }}"
 
       - name: Add Helm repos
-        run: |
-          helm repo add bitnami https://charts.bitnami.com/bitnami
-          helm repo add bjw-s https://bjw-s.github.io/helm-charts
+        run: helm repo add bjw-s https://bjw-s.github.io/helm-charts
 
       - name: Install chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
