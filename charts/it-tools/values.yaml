@@ -30,6 +30,10 @@ controllers:
           readOnlyRootFilesystem: true
           # -- Disable privilege escalations
           allowPrivilegeEscalation: false
+          # -- Drop all capabilities
+          capabilities:
+            drop:
+              - ALL
 
     pod:
       securityContext:

@@ -1,4 +1,4 @@
-name: Lint and Test Charts
+name: Linting and Testing
 
 on:
   push:
@@ -50,9 +50,11 @@ jobs:
           fi
 
       - name: Create kind cluster
+        if: steps.list-changed.outputs.changed == 'true'
         uses: helm/kind-action@v1.10.0
 
       - name: Run chart-testing (install)
+        if: steps.list-changed.outputs.changed == 'true'
         run: |
           helm repo add bjw-s https://bjw-s.github.io/helm-charts
           ct install --config .github/ct-install-config.yaml

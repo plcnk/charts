@@ -53,34 +53,6 @@ persistence:
         app:
           - path: /etc/nginx/nginx.conf
             subPath: nginx.conf
-
-controllers:
-  main:
-    containers:
-      app:
-        ports:
-          - containerPort: 80
-            name: http
-            protocol: TCP
-        probes:
-          liveness:
-            enabled: true
-            custom: true
-            spec:
-              httpGet:
-                path: /
-                port: http
-              periodSeconds: 30
-              timeoutSeconds: 30
-          readiness:
-            enabled: true
-            custom: true
-            spec:
-              httpGet:
-                path: /
-                port: http
-              periodSeconds: 30
-              timeoutSeconds: 30
 {{- end -}}
 
 {{- $tmplVars := deepCopy . -}}
