@@ -20,8 +20,8 @@ sources:
   - https://github.com/CorentinTh/it-tools
 annotations:
   artifacthub.io/changes: |-
-    - kind: removed
-      description: Removed liveness and readiness probes
+    - kind: changed
+      description: Changed service port
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/CorentinTh/it-tools

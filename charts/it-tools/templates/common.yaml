@@ -18,7 +18,7 @@ configMaps:
             include /etc/nginx/mime.types;
         
             server {
-                listen 80;
+                listen 8080;
                 server_name _;
                 root /usr/share/nginx/html;
                 index index.html;
@@ -59,7 +59,7 @@ controllers:
     containers:
       app:
         ports:
-          - containerPort: 80
+          - containerPort: 8080
             name: http
             protocol: TCP
         probes:
