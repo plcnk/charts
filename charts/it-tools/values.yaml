@@ -29,7 +29,7 @@ controllers:
           # -- Mount the container's root filesystem as read-only
           readOnlyRootFilesystem: true
           # -- Disable privilege escalations
-          allowPrivilegeEscalation: false
+          # allowPrivilegeEscalation: false
           # -- Drop all capabilities
           capabilities:
             drop:
