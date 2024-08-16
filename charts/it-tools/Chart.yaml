@@ -21,7 +21,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Changed service port
+      description: Changed service port from 80 to 8080
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/CorentinTh/it-tools
