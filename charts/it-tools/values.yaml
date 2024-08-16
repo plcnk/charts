@@ -30,12 +30,6 @@ controllers:
           readOnlyRootFilesystem: true
           # -- Disable privilege escalations
           allowPrivilegeEscalation: false
-          # -- Drop all capabilities except Bind Service
-          capabilities:
-            add:
-              - NET_BIND_SERVICE
-            drop:
-              - ALL
 
     pod:
       securityContext:
