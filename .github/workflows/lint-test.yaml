@@ -24,7 +24,9 @@ jobs:
         uses: helm/chart-testing-action@v2.6.1
 
       - name: Run chart-testing (lint)
-        run: ct lint --config .github/ct-lint-config.yaml
+        run: |
+          helm repo add bjw-s https://bjw-s.github.io/helm-charts
+          ct lint --config .github/ct-lint-config.yaml
 
   test:
     runs-on: ubuntu-latest
@@ -46,10 +48,6 @@ jobs:
           if [[ -n "$changed" ]]; then
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
-      - name: Run chart-testing (lint)
-        run: |
-          helm repo add bjw-s https://bjw-s.github.io/helm-charts
-          ct lint --chart-dirs charts --all
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.10.0
