@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg" align="right" width="92" alt="it-tools logo">
 
-![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat)
+![Version: 2.1.1](https://img.shields.io/badge/Version-2.1.1-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: 2024.5.13-a0bc346](https://img.shields.io/badge/AppVersion-2024.5.13--a0bc346-informational?style=flat)
 
@@ -11,7 +11,7 @@ Collection of handy online tools for developers, with great UX.
 **Homepage:** <https://github.com/plcnk/charts/tree/master/charts/it-tools>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=it-tools&version=2.1.0)**
+[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=it-tools&version=2.1.1)**
 
 ## Source Code
 
@@ -95,6 +95,7 @@ N/A
 | controllers.main.pod.securityContext.runAsGroup | int | `65534` | Run as `nobody` group |
 | controllers.main.pod.securityContext.runAsNonRoot | bool | `true` | Run container as a non-root user |
 | controllers.main.pod.securityContext.runAsUser | int | `65534` | Run as `nobody` user |
+| controllers.main.replicas | int | `1` | Number of desired pods |
 | controllers.main.resources | object | `{}` | Set the resource requests / limits for the container. |
 | controllers.main.type | string | `"deployment"` | Controller type |
 | ingress.main | object | See [values.yaml](./values.yaml) | Enable and configure ingress settings for the chart under this key. |
