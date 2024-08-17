@@ -4,6 +4,12 @@
     "github>plcnk/.github:default.json5",
     ":semanticCommitTypeAll(chore)"
   ],
+
+  "gitIgnoredAuthors": [
+    "renovate[bot]@users.noreply.github.com",
+    "178334506+plcnk-bot[bot]@users.noreply.github.com"
+  ],
+
   "regexManagers": [
     {
       "fileMatch": ["\\.yaml$"],
