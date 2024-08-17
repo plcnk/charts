@@ -4,7 +4,7 @@ description: Ambient sounds for focus and calm.
 home: https://github.com/plcnk/charts/tree/master/charts/moodist
 icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/moodist/icon.svg
 type: application
-version: 0.1.0
+version: 0.1.1
 # renovate datasource=docker depName=ghcr.io/remvze/moodist
 appVersion: "v1.5.1"
 kubeVersion: ">=1.22.0-0"
@@ -22,8 +22,8 @@ sources:
   - https://github.com/remvze/moodist
 annotations:
   artifacthub.io/changes: |-
-    - kind: added
-      description: Initial release
+    - kind: changed
+      description: Update ghcr.io/remvze/moodist docker tag to v1.5.1
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/remvze/moodist
