@@ -1,0 +1,104 @@
+{{/* Append the hardcoded settings */}}
+{{- define "moodist.harcodedValues" -}}
+configMaps:
+  nginx-conf:
+    enabled: true
+    data:
+      nginx.conf: |
+        worker_processes  1;
+
+        error_log /tmp/nginx/error.log warn;
+        pid       /tmp/nginx/nginx.pid;
+
+        events {
+          worker_connections  1024;
+        }
+
+        http {
+          server {
+            listen 8080;
+            server_name   _;
+
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+            include /etc/nginx/mime.types;
+
+            gzip on;
+            gzip_min_length 1000;
+            gzip_proxied expired no-cache no-store private auth;
+            gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+            error_page 404 /404.html;
+            location = /404.html {
+                    root /usr/share/nginx/html;
+                    internal;
+            }
+
+            location / {
+                    try_files $uri $uri/index.html =404;
+            }
+          }
+        }
+
+persistence:
+  cache:
+    enabled: true
+    type: emptyDir
+    advancedMounts:
+      main:
+        app:
+          - path: /var/cache/nginx
+  tmp:
+    enabled: true
+    type: emptyDir
+    advancedMounts:
+      main:
+        app:
+          - path: /tmp/nginx
+  nginx-conf:
+    enabled: true
+    type: configMap
+    name: {{ include "bjw-s.common.lib.chart.names.fullname" . }}-nginx-conf
+    advancedMounts:
+      main:
+        app:
+          - path: /etc/nginx/nginx.conf
+            subPath: nginx.conf
+
+controllers:
+  main:
+    containers:
+      app:
+        ports:
+          - containerPort: 8080
+            name: http
+            protocol: TCP
+        probes:
+          liveness:
+            enabled: true
+            custom: true
+            spec:
+              httpGet:
+                path: /
+                port: http
+              periodSeconds: 30
+              timeoutSeconds: 30
+          readiness:
+            enabled: true
+            custom: true
+            spec:
+              httpGet:
+                path: /
+                port: http
+              periodSeconds: 30
+              timeoutSeconds: 30
+{{- end -}}
+
+{{- $tmplVars := deepCopy . -}}
+{{ include "bjw-s.common.loader.init" $tmplVars }}
+{{- $defaultValues := include "moodist.harcodedValues" $tmplVars | fromYaml -}}
+{{- $_ := mustMerge .Values $defaultValues -}}
+
+{{/* Render the templates */}}
+{{ include "bjw-s.common.loader.init" . }}
+{{ include "bjw-s.common.loader.generate" . }}
