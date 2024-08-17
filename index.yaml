@@ -280,4 +280,39 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-16T21:03:55.147649751Z"
+  moodist:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: Initial release
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/remvze/moodist
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/moodist
+    apiVersion: v2
+    appVersion: v1.5.0
+    created: "2024-08-17T09:51:30.111113757Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.3.2
+    description: Ambient sounds for focus and calm.
+    digest: d07065a26c044dd7b9c914e779a1044dcc72b1b942765694a62dc1c0d87be070
+    home: https://github.com/plcnk/charts/tree/master/charts/moodist
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/moodist/icon.svg
+    keywords:
+    - ambient
+    - ambient-sounds
+    - calm
+    - white-noise
+    - focus
+    kubeVersion: '>=1.22.0-0'
+    name: moodist
+    sources:
+    - https://github.com/remvze/moodist
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/moodist-0.1.0/moodist-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-08-17T09:51:30.111148192Z"
