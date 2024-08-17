@@ -24,6 +24,7 @@ The code in this repository is provided as-is with no warranties.
 | Chart | Description |
 | ----- | ----------- |
 | [# it-tools <img src='https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg' alt='it-tools icon' width='18px' align='right' loading='lazy'>](https://github.com/plcnk/charts/tree/master/charts/it-tools/) | Collection of handy online tools for developers, with great UX. |
+| [# moodist <img src='https://raw.githubusercontent.com/plcnk/charts/master/charts/moodist/icon.svg' alt='moodist icon' width='18px' align='right' loading='lazy'>](https://github.com/plcnk/charts/tree/master/charts/moodist/) | Ambient sounds for focus and calm. |
 
 ## License
 
