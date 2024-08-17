@@ -13,8 +13,8 @@ jobs:
     name: Update Chart Metadata
     runs-on: ubuntu-latest
     env:
-      AUTHOR_USER: chart-bot
-      AUTHOR_EMAIL: 160046936+charts-bot[bot]@users.noreply.github.com
+      AUTHOR_USER: plcnk-bot
+      AUTHOR_EMAIL: 178334506+plcnk-bot[bot]@users.noreply.github.com
     steps:
       - name: Generate Token
         id: app-token
