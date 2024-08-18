@@ -77,7 +77,16 @@ helm install wikijs plcnk/wikijs -f values.yaml
 
 ## Custom configuration
 
-N/A
+This chart includes a subchart for PostgreSQL, made by [Bitnami](https://github.com/bitnami/charts/tree/main/bitnami/postgresql).
+
+This is fine for testing purposes but we strongly recommend you to use your own database for a production environment.
+
+If you want to use your own database and disable the included PostgreSQL database, you can do so in the `values.yaml` file:
+
+```yaml
+postgresql:
+  enabled: false
+```
 
 ## Values
 
@@ -88,7 +97,7 @@ N/A
 | controllers.main.containers.app.env | object | See [values.yaml](./values.yaml) | Environment variables.    The database environment variables **need** to be set if `postgresql.enabled` is set to `false` |
 | controllers.main.containers.app.env.TZ | string | `"UTC"` | Set container timezone |
 | controllers.main.containers.app.image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
-| controllers.main.containers.app.image.repository | string | `"requarks/wiki"` | Image repository |
+| controllers.main.containers.app.image.repository | string | `"ghcr.io/requarks/wiki"` | Image repository |
 | controllers.main.containers.app.image.tag | string | `"2.5.303"` | Image tag |
 | controllers.main.containers.app.securityContext.allowPrivilegeEscalation | bool | `false` | Disable privilege escalations |
 | controllers.main.containers.app.securityContext.capabilities | object | `{"drop":["ALL"]}` | Drop all capabilities |
