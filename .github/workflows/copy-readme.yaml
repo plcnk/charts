@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Copy README to gh-pages
-        uses: planetoftheweb/copy-to-branches@v1
+        uses: planetoftheweb/copy-to-branches@v1.3
         env:
           key: master
           files: README.md
