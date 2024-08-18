@@ -5,7 +5,7 @@ home: https://github.com/plcnk/charts/tree/master/charts/wikijs
 icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/wikijs/icon.svg
 type: application
 version: 0.1.0
-# renovate datasource=docker depName=requarks/wiki
+# renovate datasource=docker depName=ghcr.io/requarks/wiki
 appVersion: "2.5.303"
 kubeVersion: ">=1.22.0-0"
 keywords:

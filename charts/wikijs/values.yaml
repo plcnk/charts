@@ -18,7 +18,7 @@ controllers:
       app:
         image:
           # -- Image repository
-          repository: requarks/wiki
+          repository: ghcr.io/requarks/wiki
           # -- Image pull policy
           pullPolicy: IfNotPresent
           # -- Image tag
