@@ -1,0 +1,33 @@
+apiVersion: v2
+name: wikijs
+description: A modern, lightweight and powerful wiki app built on NodeJS.
+home: https://github.com/plcnk/charts/tree/master/charts/wikijs
+icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/wikijs/icon.svg
+type: application
+version: 0.1.0
+# renovate datasource=docker depName=ghcr.io/requarks/wiki
+appVersion: "2.5.303"
+kubeVersion: ">=1.22.0-0"
+keywords:
+  - wikijs
+  - wiki
+  - documentation
+dependencies:
+  - name: common
+    repository: https://bjw-s.github.io/helm-charts
+    version: 3.3.2
+  - name: postgresql
+    repository: https://charts.bitnami.com/bitnami
+    version: 15.5.20
+    condition: postgresql.enabled
+sources:
+  - https://github.com/Requarks/wiki
+annotations:
+  artifacthub.io/changes: |-
+    - kind: added
+      description: Initial release
+  artifacthub.io/links: |-
+    - name: App Source
+      url: https://github.com/Requarks/wiki
+    - name: Chart Source
+      url: https://github.com/plcnk/charts/tree/master/charts/wikijs

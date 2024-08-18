@@ -1,0 +1,22 @@
+{{- define "custom.chart.name" -}}
+# {{ .Name }}
+{{- end -}}
+
+{{- define "custom.custom.configuration.header" -}}
+## Custom configuration
+{{- end -}}
+
+{{- define "custom.custom.configuration" -}}
+{{ template "custom.custom.configuration.header" . }}
+
+This chart includes a subchart for PostgreSQL, made by [Bitnami](https://github.com/bitnami/charts/tree/main/bitnami/postgresql).
+
+This is fine for testing purposes but we strongly recommend you to use your own database for a production environment.
+
+If you want to use your own database and disable the included PostgreSQL database, you can do so in the `values.yaml` file:
+
+```yaml
+postgresql:
+  enabled: false
+```
+{{- end -}}

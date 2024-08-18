@@ -1,0 +1,82 @@
+{{/* Append the hardcoded settings */}}
+{{- define "wikijs.harcodedValues" -}}
+persistence:
+  data:
+    enabled: true
+    {{- with .Values.data }}
+    storageClass: {{ .storageClass }}
+    accessMode: {{ .accessMode }}
+    size: {{ .size }}
+    {{- end }}
+    globalMounts:
+      - path: /wiki/data
+        readOnly: false
+
+controllers:
+  main:
+    containers:
+      app:
+        {{- if .Values.postgresql.enabled }}
+        {{- with .Values.postgresql }}
+        env:
+          DB_TYPE: postgres
+          DB_HOST: {{ $.Release.Name }}-postgresql
+          DB_PORT: 5432
+          DB_NAME: {{ .auth.database }}
+          DB_USER: {{ .auth.username }}
+          {{ if .auth.password }}
+          DB_PASS: {{ .auth.password }}
+          {{ else if .auth.existingSecret }}
+          DB_PASS:
+            secretKeyRef:
+              name: {{ .auth.existingSecret }}
+              key: {{ .auth.secretKeys.userPasswordKey }}
+          {{ end }}
+        {{- end }}
+        {{- end}}
+        ports:
+          - containerPort: 3000
+            name: http
+            protocol: TCP
+        probes:
+          liveness:
+            enabled: true
+            custom: true
+            spec:
+              httpGet:
+                path: /healthz
+                port: http
+              periodSeconds: 30
+              timeoutSeconds: 30
+          readiness:
+            enabled: true
+            custom: true
+            spec:
+              httpGet:
+                path: /healthz
+                port: http
+              periodSeconds: 30
+              timeoutSeconds: 30
+          startup:
+            enabled: true
+            custom: true
+            spec:
+              httpGet:
+                path: /healthz
+                port: http
+              initialDelaySeconds: 15
+              periodSeconds: 5
+              timeoutSeconds: 5
+              successThreshold: 1
+              failureThreshold: 60
+              
+{{- end -}}
+
+{{- $tmplVars := deepCopy . -}}
+{{ include "bjw-s.common.loader.init" $tmplVars }}
+{{- $defaultValues := include "wikijs.harcodedValues" $tmplVars | fromYaml -}}
+{{- $_ := mustMerge .Values $defaultValues -}}
+
+{{/* Render the templates */}}
+{{ include "bjw-s.common.loader.init" . }}
+{{ include "bjw-s.common.loader.generate" . }}
