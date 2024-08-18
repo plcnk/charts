@@ -57,6 +57,19 @@ controllers:
                 port: http
               periodSeconds: 30
               timeoutSeconds: 30
+          startup:
+            enabled: true
+            custom: true
+            spec:
+              httpGet:
+                path: /healthz
+                port: http
+              initialDelaySeconds: 15
+              periodSeconds: 5
+              timeoutSeconds: 5
+              successThreshold: 1
+              failureThreshold: 60
+              
 {{- end -}}
 
 {{- $tmplVars := deepCopy . -}}
