@@ -349,4 +349,41 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/moodist-0.1.0/moodist-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-17T10:22:58.771274587Z"
+  wikijs:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: Initial release
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/Requarks/wiki
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/wikijs
+    apiVersion: v2
+    appVersion: 2.5.303
+    created: "2024-08-18T21:10:07.874033552Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.3.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.20
+    description: A modern, lightweight and powerful wiki app built on NodeJS.
+    digest: 71e3c26462a0521ad86118dfec0f49789850bba102d010c8c91528c37d60c642
+    home: https://github.com/plcnk/charts/tree/master/charts/wikijs
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/wikijs/icon.svg
+    keywords:
+    - wikijs
+    - wiki
+    - documentation
+    kubeVersion: '>=1.22.0-0'
+    name: wikijs
+    sources:
+    - https://github.com/Requarks/wiki
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/wikijs-0.1.0/wikijs-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-08-18T21:10:07.87405957Z"
