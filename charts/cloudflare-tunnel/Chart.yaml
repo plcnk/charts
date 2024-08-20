@@ -1,0 +1,30 @@
+apiVersion: v2
+name: cloudflare-tunnel
+description: Connect your resources to Cloudflare without a publicly routable IP address.
+home: https://github.com/plcnk/charts/tree/master/charts/cloudflare-tunnel
+icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/cloudflare-tunnel/icon.svg
+type: application
+version: 0.1.0
+# renovate datasource=docker depName=cloudflare/cloudflared
+appVersion: "2024.8.2"
+kubeVersion: ">=1.22.0-0"
+keywords:
+  - cloudflared
+  - cloudflare
+  - argo
+  - tunnel
+dependencies:
+  - name: common
+    repository: https://bjw-s.github.io/helm-charts
+    version: 3.3.2
+sources:
+  - https://github.com/cloudflare/cloudflared
+annotations:
+  artifacthub.io/changes: |-
+    - kind: added
+      description: Initial release
+  artifacthub.io/links: |-
+    - name: App Source
+      url: https://github.com/cloudflare/cloudflared
+    - name: Chart Source
+      url: https://github.com/plcnk/charts/tree/master/charts/cloudflare-tunnel

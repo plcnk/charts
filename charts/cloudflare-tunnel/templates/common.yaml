@@ -1,0 +1,59 @@
+{{/* Append the hardcoded settings */}}
+{{- define "cloudflare-tunnel.harcodedValues" -}}
+{{- if .Values.metrics.enabled }}
+service:
+  main:
+    controller: main
+    ports:
+      metrics:
+        port: {{ .Values.metrics.port }}
+        protocol: TCP
+serviceMonitor:
+  main:
+    enabled: true
+    serviceName: {{ include "bjw-s.common.lib.chart.names.fullname" $ }}
+    endpoints:
+      - port: metrics
+        path: /metrics
+{{- end }}
+
+controllers:
+  main:
+    containers:
+      app:
+        {{- if .Values.metrics.enabled }}
+        ports:
+          - name: metrics
+            containerPort: {{ .Values.metrics.port }}
+        {{- end }}
+        env:
+          TUNNEL_TOKEN: {{ if not .Values.tunnel.existingSecret.enabled }}{{ .Values.tunnel.token }}{{ end }}
+            {{- if .Values.tunnel.existingSecret.enabled }}
+            secretKeyRef:
+              name: {{ .Values.tunnel.existingSecret.name }}
+              key: {{ .Values.tunnel.existingSecret.key }}
+            {{- end }}
+        args:
+          - tunnel
+          - --no-autoupdate
+          {{- if .Values.logLevel }}
+          - --loglevel
+          - {{ .Values.logLevel }}
+          {{- end }}
+          {{- if .Values.metrics.enabled }}
+          - --metrics
+          - "0.0.0.0:{{ .Values.metrics.port }}"
+          {{- end }}
+          - run
+          - --token
+          - $(TUNNEL_TOKEN)
+{{- end -}}
+
+{{- $tmplVars := deepCopy . -}}
+{{ include "bjw-s.common.loader.init" $tmplVars }}
+{{- $defaultValues := include "cloudflare-tunnel.harcodedValues" $tmplVars | fromYaml -}}
+{{- $_ := mustMerge .Values $defaultValues -}}
+
+{{/* Render the templates */}}
+{{ include "bjw-s.common.loader.init" . }}
+{{ include "bjw-s.common.loader.generate" . }}
