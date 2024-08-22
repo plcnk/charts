@@ -34,6 +34,7 @@ controllers:
               key: {{ .Values.tunnel.existingSecret.key }}
             {{- end }}
         args:
+          {{- if ne .Values.tunnel.token "your-token-here" }}
           - tunnel
           - --no-autoupdate
           {{- if .Values.logLevel }}
@@ -47,6 +48,10 @@ controllers:
           - run
           - --token
           - $(TUNNEL_TOKEN)
+          {{- else }}
+          - --url
+          - localhost:8080
+          {{- end }}
 {{- end -}}
 
 {{- $tmplVars := deepCopy . -}}

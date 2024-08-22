@@ -59,8 +59,10 @@ controllers:
 
 tunnel:
   # -- Set the Cloudflare Tunnel token here.
+  #    Cannot coexist with `tunnel.existingSecret.enabled` set to `true`.
   token: "your-token-here"
   # -- You can set the token as an existing secret here.
+  #    Cannot coexist with `tunnel.token`
   existingSecret:
     enabled: false
     name: ""
