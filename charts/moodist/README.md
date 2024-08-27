@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/plcnk/charts/master/charts/moodist/icon.svg" align="right" width="92" alt="moodist logo">
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat)
+![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: v1.5.1](https://img.shields.io/badge/AppVersion-v1.5.1-informational?style=flat)
 
@@ -11,7 +11,7 @@ Ambient sounds for focus and calm.
 **Homepage:** <https://github.com/plcnk/charts/tree/master/charts/moodist>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=moodist&version=0.1.1)**
+[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=moodist&version=0.2.0)**
 
 ## Source Code
 
@@ -25,7 +25,7 @@ Kubernetes: `>=1.22.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| <https://bjw-s.github.io/helm-charts> | common | 3.3.2 |
+| <https://bjw-s.github.io/helm-charts> | common | 3.4.0 |
 
 ## Installing the Chart
 
