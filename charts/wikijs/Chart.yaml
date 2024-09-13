@@ -18,7 +18,7 @@ dependencies:
     version: 3.3.2
   - name: postgresql
     repository: https://charts.bitnami.com/bitnami
-    version: 15.5.30
+    version: 15.5.31
     condition: postgresql.enabled
 sources:
   - https://github.com/Requarks/wiki
