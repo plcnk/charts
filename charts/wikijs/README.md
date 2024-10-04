@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/plcnk/charts/master/charts/wikijs/icon.svg" align="right" width="92" alt="wikijs logo">
 
-![Version: 0.1.16](https://img.shields.io/badge/Version-0.1.16-informational?style=flat)
+![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: 2.5.304](https://img.shields.io/badge/AppVersion-2.5.304-informational?style=flat)
 
@@ -11,7 +11,7 @@ A modern, lightweight and powerful wiki app built on NodeJS.
 **Homepage:** <https://github.com/plcnk/charts/tree/master/charts/wikijs>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=wikijs&version=0.1.16)**
+[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=wikijs&version=0.2.0)**
 
 ## Source Code
 
@@ -26,7 +26,7 @@ Kubernetes: `>=1.22.0-0`
 | Repository | Name | Version |
 |------------|------|---------|
 | <https://bjw-s.github.io/helm-charts> | common | 3.3.2 |
-| <https://charts.bitnami.com/bitnami> | postgresql | 15.5.38 |
+| <https://charts.bitnami.com/bitnami> | postgresql | 16.0.1 |
 
 ## Installing the Chart
 
