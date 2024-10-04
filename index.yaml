@@ -524,6 +524,42 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Update postgresql helm release to v16
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/Requarks/wiki
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/wikijs
+    apiVersion: v2
+    appVersion: 2.5.304
+    created: "2024-10-04T22:23:45.349083036Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.3.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.0.1
+    description: A modern, lightweight and powerful wiki app built on NodeJS.
+    digest: 0a7cac850e6e51ac45b5145c9df88073a80f78bcef80a20827505a0a13bfee28
+    home: https://github.com/plcnk/charts/tree/master/charts/wikijs
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/wikijs/icon.svg
+    keywords:
+    - wikijs
+    - wiki
+    - documentation
+    kubeVersion: '>=1.22.0-0'
+    name: wikijs
+    sources:
+    - https://github.com/Requarks/wiki
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/wikijs-0.2.0/wikijs-0.2.0.tgz
+    version: 0.2.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Update postgresql helm release to v15.5.38
       artifacthub.io/links: |-
         - name: App Source
@@ -1133,4 +1169,4 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/wikijs-0.1.0/wikijs-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-01T22:17:40.635208392Z"
+generated: "2024-10-04T22:23:45.34920799Z"
