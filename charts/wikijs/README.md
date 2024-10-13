@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/plcnk/charts/master/charts/wikijs/icon.svg" align="right" width="92" alt="wikijs logo">
 
-![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat)
+![Version: 0.2.1](https://img.shields.io/badge/Version-0.2.1-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: 2.5.304](https://img.shields.io/badge/AppVersion-2.5.304-informational?style=flat)
+![AppVersion: 2.5.305](https://img.shields.io/badge/AppVersion-2.5.305-informational?style=flat)
 
 A modern, lightweight and powerful wiki app built on NodeJS.
 
 **Homepage:** <https://github.com/plcnk/charts/tree/master/charts/wikijs>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=wikijs&version=0.2.0)**
+[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=wikijs&version=0.2.1)**
 
 ## Source Code
 
@@ -98,7 +98,7 @@ postgresql:
 | controllers.main.containers.app.env.TZ | string | `"UTC"` | Set container timezone |
 | controllers.main.containers.app.image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
 | controllers.main.containers.app.image.repository | string | `"ghcr.io/requarks/wiki"` | Image repository |
-| controllers.main.containers.app.image.tag | string | `"2.5.304"` | Image tag |
+| controllers.main.containers.app.image.tag | string | `"2.5.305"` | Image tag |
 | controllers.main.containers.app.securityContext.allowPrivilegeEscalation | bool | `false` | Disable privilege escalations |
 | controllers.main.containers.app.securityContext.capabilities | object | `{"drop":["ALL"]}` | Drop all capabilities |
 | controllers.main.containers.app.securityContext.readOnlyRootFilesystem | bool | `true` | Mount the container's root filesystem as read-only |
