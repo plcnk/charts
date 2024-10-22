@@ -209,6 +209,38 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: added
+          description: Update ghcr.io/corentinth/it-tools docker tag to 2024.10.22-7ca5933
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/CorentinTh/it-tools
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    apiVersion: v2
+    appVersion: 2024.10.22-7ca5933
+    created: "2024-10-22T20:33:40.641231798Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.3.2
+    description: Collection of handy online tools for developers, with great UX.
+    digest: 2a6816f360d6020a3d3c918a7790760bc2fd7e25cfdc3b7b7c34f98d3b0955bd
+    home: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg
+    keywords:
+    - it-tools
+    - it
+    - tools
+    kubeVersion: '>=1.22.0-0'
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/it-tools-2.1.2/it-tools-2.1.2.tgz
+    version: 2.1.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
           description: Added replicas key
       artifacthub.io/links: |-
         - name: App Source
@@ -1347,4 +1379,4 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/wikijs-0.1.0/wikijs-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-22T19:59:34.114406893Z"
+generated: "2024-10-22T20:33:40.641338286Z"
