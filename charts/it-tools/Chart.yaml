@@ -6,7 +6,7 @@ icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon
 type: application
 version: 2.1.1
 # renovate datasource=docker depName=ghcr.io/corentinth/it-tools
-appVersion: "2024.5.13-a0bc346"
+appVersion: "2024.10.22-7ca5933"
 kubeVersion: ">=1.22.0-0"
 keywords:
   - it-tools
