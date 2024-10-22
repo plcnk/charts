@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg" align="right" width="92" alt="it-tools logo">
 
-![Version: 2.1.1](https://img.shields.io/badge/Version-2.1.1-informational?style=flat)
+![Version: 2.1.2](https://img.shields.io/badge/Version-2.1.2-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: 2024.5.13-a0bc346](https://img.shields.io/badge/AppVersion-2024.5.13--a0bc346-informational?style=flat)
+![AppVersion: 2024.10.22-7ca5933](https://img.shields.io/badge/AppVersion-2024.10.22--7ca5933-informational?style=flat)
 
 Collection of handy online tools for developers, with great UX.
 
 **Homepage:** <https://github.com/plcnk/charts/tree/master/charts/it-tools>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=it-tools&version=2.1.1)**
+[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=it-tools&version=2.1.2)**
 
 ## Source Code
 
@@ -87,7 +87,7 @@ N/A
 | controllers.main.containers.app.env | object | See [values.yaml](./values.yaml) | Environment variables |
 | controllers.main.containers.app.image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
 | controllers.main.containers.app.image.repository | string | `"ghcr.io/corentinth/it-tools"` | Image repository |
-| controllers.main.containers.app.image.tag | string | `"2024.5.13-a0bc346"` | Image tag |
+| controllers.main.containers.app.image.tag | string | `"2024.10.22-7ca5933"` | Image tag |
 | controllers.main.containers.app.securityContext.allowPrivilegeEscalation | bool | `false` | Disable privilege escalations |
 | controllers.main.containers.app.securityContext.capabilities | object | `{"drop":["ALL"]}` | Drop all capabilities |
 | controllers.main.containers.app.securityContext.readOnlyRootFilesystem | bool | `true` | Mount the container's root filesystem as read-only |
