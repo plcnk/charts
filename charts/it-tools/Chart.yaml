@@ -4,7 +4,7 @@ description: Collection of handy online tools for developers, with great UX.
 home: https://github.com/plcnk/charts/tree/master/charts/it-tools
 icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg
 type: application
-version: 2.1.1
+version: 2.1.2
 # renovate datasource=docker depName=ghcr.io/corentinth/it-tools
 appVersion: "2024.10.22-7ca5933"
 kubeVersion: ">=1.22.0-0"
@@ -21,7 +21,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: added
-      description: Added replicas key
+      description: Update ghcr.io/corentinth/it-tools docker tag to 2024.10.22-7ca5933
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/CorentinTh/it-tools
