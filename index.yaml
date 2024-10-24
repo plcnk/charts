@@ -4,6 +4,40 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Update cloudflare/cloudflared docker tag to v2024.10.1
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/cloudflare/cloudflared
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/cloudflare-tunnel
+    apiVersion: v2
+    appVersion: 2024.10.1
+    created: "2024-10-24T19:28:20.419748634Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.3.2
+    description: Connect your resources to Cloudflare without a publicly routable
+      IP address.
+    digest: 0ef4b0c29b4a83eff76a6a8bcc0422028561ba6634f01bc514c943f0abdbc12d
+    home: https://github.com/plcnk/charts/tree/master/charts/cloudflare-tunnel
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/cloudflare-tunnel/icon.svg
+    keywords:
+    - cloudflared
+    - cloudflare
+    - argo
+    - tunnel
+    kubeVersion: '>=1.22.0-0'
+    name: cloudflare-tunnel
+    sources:
+    - https://github.com/cloudflare/cloudflared
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/cloudflare-tunnel-0.3.1/cloudflare-tunnel-0.3.1.tgz
+    version: 0.3.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Update cloudflare/cloudflared docker tag to v2024.10.0
       artifacthub.io/links: |-
         - name: App Source
@@ -1415,4 +1449,4 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/wikijs-0.1.0/wikijs-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-24T19:27:10.152152164Z"
+generated: "2024-10-24T19:28:20.419862157Z"
