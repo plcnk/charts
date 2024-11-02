@@ -1,27 +1,30 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>plcnk/.github:default.json5",
-    ":semanticCommitTypeAll(chore)"
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'github>plcnk/.github:default.json5',
+    ':semanticCommitTypeAll(chore)',
   ],
-
-  "gitIgnoredAuthors": [
-    "renovate[bot]@users.noreply.github.com",
-    "178334506+plcnk-bot[bot]@users.noreply.github.com"
+  gitIgnoredAuthors: [
+    'renovate[bot]@users.noreply.github.com',
+    '178334506+plcnk-bot[bot]@users.noreply.github.com',
   ],
-
-  "regexManagers": [
+  customManagers: [
     {
-      "fileMatch": ["\\.yaml$"],
-      "matchStrings": [
-        "# ?renovate datasource=(?<datasource>.+?) depName=(?<depName>.+)\\n.+: [\"']?(?<currentValue>.+?)[\"']?\\n"
-      ]
-    }
+      customType: 'regex',
+      fileMatch: [
+        '\\.yaml$',
+      ],
+      matchStrings: [
+        '# ?renovate datasource=(?<datasource>.+?) depName=(?<depName>.+)\\n.+: ["\']?(?<currentValue>.+?)["\']?\\n',
+      ],
+    },
   ],
-  "packageRules": [
+  packageRules: [
     {
-      "matchDatasources": ["helm"],
-      "commitMessageTopic": "{{depName}} Helm release"
-    }
-  ]
+      matchDatasources: [
+        'helm',
+      ],
+      commitMessageTopic: '{{depName}} Helm release',
+    },
+  ],
 }
