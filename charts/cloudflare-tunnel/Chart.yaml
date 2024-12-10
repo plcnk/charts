@@ -4,9 +4,9 @@ description: Connect your resources to Cloudflare without a publicly routable IP
 home: https://github.com/plcnk/charts/tree/master/charts/cloudflare-tunnel
 icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/cloudflare-tunnel/icon.svg
 type: application
-version: 0.4.1
+version: 0.5.0
 # renovate datasource=docker depName=cloudflare/cloudflared
-appVersion: "2024.11.1"
+appVersion: "2024.12.0"
 kubeVersion: ">=1.22.0-0"
 keywords:
   - cloudflared
@@ -22,7 +22,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update cloudflare/cloudflared docker tag to v2024.11.1
+      description: Update cloudflare/cloudflared docker tag to v2024.12.0
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/cloudflare/cloudflared
