@@ -4,7 +4,7 @@ description: A modern, lightweight and powerful wiki app built on NodeJS.
 home: https://github.com/plcnk/charts/tree/master/charts/wikijs
 icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/wikijs/icon.svg
 type: application
-version: 0.4.3
+version: 0.5.0
 # renovate datasource=docker depName=ghcr.io/requarks/wiki
 appVersion: "2.5.305"
 kubeVersion: ">=1.22.0-0"
@@ -18,14 +18,14 @@ dependencies:
     version: 3.3.2
   - name: postgresql
     repository: https://charts.bitnami.com/bitnami
-    version: 16.2.5
+    version: 16.3.0
     condition: postgresql.enabled
 sources:
   - https://github.com/Requarks/wiki
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update postgresql helm release to v16.2.5
+      description: Update postgresql helm release to v16.3.0
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/Requarks/wiki
