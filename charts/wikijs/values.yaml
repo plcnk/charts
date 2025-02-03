@@ -22,7 +22,7 @@ controllers:
           # -- Image pull policy
           pullPolicy: IfNotPresent
           # -- Image tag
-          tag: 2.5.305
+          tag: 2.5.306
 
         # -- Environment variables.
         #    The database environment variables **need** to be set if `postgresql.enabled` is set to `false`
