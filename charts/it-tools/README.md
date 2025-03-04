@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg" align="right" width="92" alt="it-tools logo">
 
-![Version: 2.1.2](https://img.shields.io/badge/Version-2.1.2-informational?style=flat)
+![Version: 2.2.0](https://img.shields.io/badge/Version-2.2.0-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: 2024.10.22-7ca5933](https://img.shields.io/badge/AppVersion-2024.10.22--7ca5933-informational?style=flat)
 
@@ -11,7 +11,7 @@ Collection of handy online tools for developers, with great UX.
 **Homepage:** <https://github.com/plcnk/charts/tree/master/charts/it-tools>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=it-tools&version=2.1.2)**
+[here](https://github.com/plcnk/charts/issues/new?assignees=plcnk&labels=bug&template=bug_report.yaml&name=it-tools&version=2.2.0)**
 
 ## Source Code
 
@@ -25,7 +25,7 @@ Kubernetes: `>=1.22.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| <https://bjw-s.github.io/helm-charts> | common | 3.3.2 |
+| <https://bjw-s.github.io/helm-charts> | common | 3.7.2 |
 
 ## Installing the Chart
 
