@@ -6,7 +6,7 @@ icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/wikijs/icon.s
 type: application
 version: 0.7.4
 # renovate datasource=docker depName=ghcr.io/requarks/wiki
-appVersion: "2.5.306"
+appVersion: "2.5.307"
 kubeVersion: ">=1.22.0-0"
 keywords:
   - wikijs
