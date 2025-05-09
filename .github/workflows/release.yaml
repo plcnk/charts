@@ -45,7 +45,7 @@ jobs:
 
       - name: Add Helm repos
         run: |
-          helm repo add bjw-s https://bjw-s.github.io/helm-charts
+          helm repo add bjw-s https://bjw-s-labs.github.io/helm-charts
           helm repo add bitnami https://charts.bitnami.com/bitnami
 
       - name: Install chart-releaser
