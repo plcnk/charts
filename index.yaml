@@ -4,6 +4,40 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Update bjw-s chart link
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/cloudflare/cloudflared
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/cloudflare-tunnel
+    apiVersion: v2
+    appVersion: 2025.4.2
+    created: "2025-05-09T09:44:07.613978083Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 3.3.2
+    description: Connect your resources to Cloudflare without a publicly routable
+      IP address.
+    digest: db4dcd687406261164e2cecdd8728710de02846e0342df3e6caa7205fd38f83f
+    home: https://github.com/plcnk/charts/tree/master/charts/cloudflare-tunnel
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/cloudflare-tunnel/icon.svg
+    keywords:
+    - cloudflared
+    - cloudflare
+    - argo
+    - tunnel
+    kubeVersion: '>=1.22.0-0'
+    name: cloudflare-tunnel
+    sources:
+    - https://github.com/cloudflare/cloudflared
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/cloudflare-tunnel-0.9.0/cloudflare-tunnel-0.9.0.tgz
+    version: 0.9.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Update cloudflare/cloudflared docker tag to v2025.4.2
       artifacthub.io/links: |-
         - name: App Source
@@ -617,6 +651,38 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: added
+          description: Update bjw-s chart link
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/CorentinTh/it-tools
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    apiVersion: v2
+    appVersion: 2024.10.22-7ca5933
+    created: "2025-05-09T09:44:07.745207369Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 3.3.2
+    description: Collection of handy online tools for developers, with great UX.
+    digest: e7213dbad41b69a670b2df0e1ad4f131dd0d1ca014639aaa8a88edfbce87a840
+    home: https://github.com/plcnk/charts/tree/master/charts/it-tools
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/it-tools/icon.svg
+    keywords:
+    - it-tools
+    - it
+    - tools
+    kubeVersion: '>=1.22.0-0'
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/it-tools-2.2.0/it-tools-2.2.0.tgz
+    version: 2.2.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
           description: Update ghcr.io/corentinth/it-tools docker tag to 2024.10.22-7ca5933
       artifacthub.io/links: |-
         - name: App Source
@@ -926,6 +992,40 @@ entries:
     - https://github.com/plcnk/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
     version: 0.1.0
   moodist:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Update bjw-s chart link
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/remvze/moodist
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/moodist
+    apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-05-09T09:44:07.852983466Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 3.3.2
+    description: Ambient sounds for focus and calm.
+    digest: 2d4bdc5c985acf4e443bcf05b02a1e252855bc087cf9e5885803f58ce7a28b3d
+    home: https://github.com/plcnk/charts/tree/master/charts/moodist
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/moodist/icon.svg
+    keywords:
+    - ambient
+    - ambient-sounds
+    - calm
+    - white-noise
+    - focus
+    kubeVersion: '>=1.22.0-0'
+    name: moodist
+    sources:
+    - https://github.com/remvze/moodist
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/moodist-0.3.0/moodist-0.3.0.tgz
+    version: 0.3.0
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -3225,4 +3325,4 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/wikijs-0.1.0/wikijs-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-01T08:54:22.823482477Z"
+generated: "2025-05-09T09:44:07.853276887Z"
