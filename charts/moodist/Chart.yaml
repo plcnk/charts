@@ -6,7 +6,7 @@ icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/moodist/icon.
 type: application
 version: 0.3.0
 # renovate datasource=docker depName=ghcr.io/remvze/moodist
-appVersion: "v2.0.1"
+appVersion: "v2.1.0"
 kubeVersion: ">=1.22.0-0"
 keywords:
   - ambient
