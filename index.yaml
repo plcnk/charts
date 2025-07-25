@@ -1131,6 +1131,40 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Update ghcr.io/remvze/moodist docker tag to v2.1.0
+      artifacthub.io/links: |-
+        - name: App Source
+          url: https://github.com/remvze/moodist
+        - name: Chart Source
+          url: https://github.com/plcnk/charts/tree/master/charts/moodist
+    apiVersion: v2
+    appVersion: v2.1.0
+    created: "2025-07-25T22:15:25.438331865Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 3.3.2
+    description: Ambient sounds for focus and calm.
+    digest: 5230b244c3d57e98e2cffd7b9b0743224bbe505f74082538a6aeb7565e798752
+    home: https://github.com/plcnk/charts/tree/master/charts/moodist
+    icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/moodist/icon.svg
+    keywords:
+    - ambient
+    - ambient-sounds
+    - calm
+    - white-noise
+    - focus
+    kubeVersion: '>=1.22.0-0'
+    name: moodist
+    sources:
+    - https://github.com/remvze/moodist
+    type: application
+    urls:
+    - https://github.com/plcnk/charts/releases/download/moodist-0.4.0/moodist-0.4.0.tgz
+    version: 0.4.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Update bjw-s chart link
       artifacthub.io/links: |-
         - name: App Source
@@ -3857,4 +3891,4 @@ entries:
     urls:
     - https://github.com/plcnk/charts/releases/download/wikijs-0.1.0/wikijs-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-12T07:42:56.899514293Z"
+generated: "2025-07-25T22:15:25.438502763Z"
