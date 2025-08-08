@@ -6,7 +6,7 @@ icon: https://raw.githubusercontent.com/plcnk/charts/master/charts/cloudflare-tu
 type: application
 version: 0.12.0
 # renovate datasource=docker depName=cloudflare/cloudflared
-appVersion: "2025.7.0"
+appVersion: "2025.8.0"
 kubeVersion: ">=1.22.0-0"
 keywords:
   - cloudflared
